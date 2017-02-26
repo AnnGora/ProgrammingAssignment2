@@ -1,6 +1,6 @@
 ## Aim of the functions: caching the inverse of a matrix
-## Why: matrix inversion = (usually) costly computation, there may be some 
-## benefit to caching the inverse of a matrix rather than compute it repeatedly
+## Why: matrix inversion = (usually) costly computation, better to cache the inverse 
+## of a matrix rather than compute it repeatedly
 
 ## part 1: function makeCacheMatrix
 ## part 2: function cacheSolve
@@ -31,8 +31,8 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Part 2: function cacheSolve
-## Modus operandi: function computes the inverse of the special "matrix" created
-## by makeCacheMatrix. If the inverse has already been calculated (and the matrix 
+## Modus operandi: function computes the inverse of the output of part 1.
+## If the inverse has already been calculated (and the matrix 
 ## has not changed), then it retrieves the inverse from the cache.
 
 cacheSolve <- function(x, ...) {
